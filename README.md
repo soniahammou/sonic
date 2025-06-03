@@ -1,39 +1,16 @@
-# Le Parcours :fire: Architecture
+# Sonic Project 
 
-Cette fois, pas de petits exercices indépendants, pas de "Yeah !" et pas de "Nope".  
-Vous allez avoir un petit projet à mettre en place. On ne va pas vous dire quoi faire à chaque étape mais vous donner le projet global.
-Lisez bien le sujet, on attend de vous que vous mettiez en place la même structure vue ensemble cette saison, des contrôleurs, des routes, modèles et des vues.
+Side project conçu pour pratiquer l’architecture MVC en PHP, le javascript. Il s'agit d'un mini site avec un quizz sur les personnages de sonic.
 
-## Au programme
+## Fonctionnalités
 
-- classes
-- héritage
-- propriétés
-- méthodes
-- routes
-- _Controllers_
-- _Views_
-- _Models_
-- **Pull Request**
-- ...
+### Backend (PHP)
+Architecture MVC maison (sans framework).
 
-:warning: L'utilisation des _namespaces_ et de l'_autoload_ restent **optionnels** :  
-=> considérez les comme un bonus et mettez les en place uniquement si vous vous sentez suffisamment à l'aise avec ces 2 notions
+Routing simple via index.php.
 
-Bon courage :muscle:
+Connexion PDO à la base de données sonic.sql.
 
-## Sujet : Après Mario, voici Sonic :tada:
-
-On souhaite mettre en place un petit site sur **Sonic**, contenant 2 pages :
-
-- 1 page d'accueil avec tous les personnages de l'univers **Sonic**, par ordre alphabétique
-- 1 page avec les 3 créateurs du premier jeu **Sonic**
-
-Mais on ne souhaite pas le faire n'importe comment.  
-Vous avez appris cette saison à bien structurer/organiser votre code et vos fichiers.  
-Il va falloir appliquer cela sur ce projet.
-
-:chicken: En plus, il va falloir coder dans une branche à part, car, à la fin, il faudra créer une **Pull Request** du code pour ce parcours.
 
 ### Base de données
 
@@ -44,53 +21,63 @@ La modélisation de la base de données est fournie :
 
 La base de données est fournie aussi : [fichier à importer](docs/sonic.sql)
 
-:warning: Attention, le nom des tables sont des mots-clés réservés du langage SQL.  
-Pour éviter les erreurs dans les requêtes SQL, il faut entourer le nom par 1 backtick `` ` ``  
-Exemple : ``SELECT * FROM `matable` ``
+
+### Frontend (HTML/CSS/JS)
+Slider interactif sur la page d'accueil.
+
+Thème sombre/clair (mode couleur).
+
+Quizz en JavaScript autour de l’univers Sonic.
+
+Styles personnalisés (reset + CSS ).
+
+
+
+
 
 ### Structure du projet
 
-La structure du projet étant similaire au projet de la saison, vous pouvez, si vous le souhaitez, en récupérer les sources et les modifier pour correspondre au parcours.  
-:warning: Attention, tout le code présent dans vos sources doit être utile au projet. **Il ne doit rester aucun code superflu**.
+``` 
+sonic-projet/
+├── app/
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Views/
+│   └── Utils/
+├── docs/
+├── public/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── images/
+│   │   └── js/
+│   └── index.php
+└── README.md
+```
 
-La qualité du code est encore plus importante dans ce parcours :
-- nom de classes, méthodes, variables claires
-- indentation
-- commentaires
-- **aucun "groupe de code" en doublon**
-- application des règles et conventions vues en cours
 
-À la fin, vous ferez une pull request, alors pensez à coder dans une branche séparée !
 
-### Aspect visuel
+### Lancer le projet localement
 
-- **Il n'y a pas d'intégration HTML/CSS demandée**
-- **Le plus important, c'est le code, pas la cosmétique** dans ce parcours
+### Prérequis
 
-### Layout
+- PHP 8+
+- Serveur local (XAMPP, MAMP, ou PHP CLI)
+- MySQL
 
-- En haut de chaque page, on trouvera une navigation contenant des liens vers la page d'accueil et la page des créateurs du jeu.
 
-### Page d'accueil
+### Installation
+``` 
+git clone git@github.com:soniahammou/sonic.git && cd sonic
 
-- Récupérer les données sur les personnages et leur type depuis la base de données
-- Afficher les personnages (image, nom, type, description) dans une balise `<table>`, par ordre alphabétique
+Importer la base de données depuis docs/sonic.sql
 
-### Les créateurs
+Créer un fichier config.ini 
 
-- Les créateurs ne sont pas dans la base de données, on vous demande de les ajouter *en dur* dans votre vue !
-- il n'y a qu'une seule page, et cette page affiche les 3 créateurs
-- Pour chaque créateur, afficher un titre de niveau 3 et un beau `lorem ipsum` des familles :sunglasses:
-- Liste des créateurs :
-    - [Hirokazu Yasuhara](https://fr.wikipedia.org/wiki/Hirokazu_Yasuhara)
-    - [Yuji Naka](https://fr.wikipedia.org/wiki/Yuji_Naka)
-    - [Naoto Ōshima](https://fr.wikipedia.org/wiki/Naoto_%C5%8Cshima)
+composer install 
 
-### Bonus
+Lancer le serveur :
+php -S localhost:8080 -t public
 
-- Vous pouvez vous amuser à rendre votre site encore plus joli avec CSS 😍
-- Vous pouvez ajouter des pages, laissez parler votre créativité :bulb:
-- Vous pouvez mettre en place les namespaces et l'autoload 🤩
-
-### :chicken:
-Pensez à créer une **Pull Request** :wink: !
+Accéder à :
+http://localhost:8080
+``` 

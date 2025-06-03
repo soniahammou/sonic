@@ -21,8 +21,10 @@
                         <img src="/assets/images/Sonic_logo.png" alt="personnage de sonic" role="img">
                     </a>
                 </li>
-                <li role="listitem"><a href="<?= $router->generate('home'); ?>" role="link"> Super Sonic </a></li>
-                <li role="listitem"><a href="<?= $router->generate('createurs'); ?>" role="link"> Les createurs</a></li>
+                <?php  /* 
+              <li role="listitem"><a href="<?= $router->generate('home'); ?>" role="link"> Super Sonic </a></li>
+            
+           <li role="listitem"><a href="<?= $router->generate('createurs'); ?>" role="link"> Les createurs</a></li>  */ ?> 
                 <li role="listitem"><a href="<?= $router->generate('personnages'); ?>" role="link"> Super Quizz</a></li>
 
                 <!-- cette classe n'est pas presente en css mais sera utile pour le js afin de cibler la bonne ancre -->
