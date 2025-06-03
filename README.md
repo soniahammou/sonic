@@ -34,28 +34,6 @@ Styles personnalisés (reset + CSS ).
 
 
 
-
-### Structure du projet
-
-``` 
-sonic-projet/
-├── app/
-│   ├── Controllers/
-│   ├── Models/
-│   ├── Views/
-│   └── Utils/
-├── docs/
-├── public/
-│   ├── assets/
-│   │   ├── css/
-│   │   ├── images/
-│   │   └── js/
-│   └── index.php
-└── README.md
-```
-
-
-
 ### Lancer le projet localement
 
 ### Prérequis
